@@ -1,11 +1,11 @@
 @extends('layout.site')
 
-@section('titulo','Cursos')
+@section('titulo','Musicas')
 
 @section('conteudo')
 
 <div class="container">
-    <h3 class="center">Lista de cursos</h3>
+    <br><br>
     <div class="row">
         <table>
             <thead>
@@ -23,8 +23,8 @@
                  <td>{{$registro->musica}}</td>
                  <td>{{$registro->artista}}</td>
                  <td>
-                    <a class="btn deep red" href="{{route('admin.cursos.editar', $registro->rank) }}">Editar</a>
-                    <a class="btn orange" href="{{route('admin.cursos.deletar', $registro->rank) }}">Deletar</a>
+                    <a class="btn deep red" href="{{route('admin.cursos.editar', $registro->id) }}">Editar</a>
+                    <a class="btn orange" href="{{route('admin.cursos.deletar', $registro->id) }}">Deletar</a>
                  </td>
                 </tr>
                 @endforeach

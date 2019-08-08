@@ -15,13 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contato/{id?}', ['uses'=>'ContatoController@index']);
 
-Route::post('/contato', ['uses'=>'ContatoController@Criar']);
-
-Route::put('/contato', ['uses'=>'ContatoController@Editar']);
-
-Route::get('/admin/curso',['as'=>'admin.cursos', 'uses'=>'CursoController@index']);
+Route::get('/',['as'=>'admin.cursos', 'uses'=>'CursoController@index']);
 Route::get('/admin/curso/adicionar',['as'=>'admin.cursos.adicionar', 'uses'=>'CursoController@adicionar']);
 Route::post('/admin/curso/salvar',['as'=>'admin.cursos.salvar', 'uses'=>'CursoController@salvar']);
 Route::get('/admin/curso/editar/{id}',['as'=>'admin.cursos.editar', 'uses'=>'CursoController@editar']);

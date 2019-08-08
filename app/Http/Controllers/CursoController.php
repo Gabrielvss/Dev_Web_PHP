@@ -31,6 +31,7 @@ class CursoController extends Controller
     public function editar($id){
 
         $registro = Curso::find($id);
+       
         return view('admin.cursos.editar',compact('registro'));
 
     }
